@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Image_Animations" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="f1.png" translatesAutoresizingMaskIntoConstraints="NO" id="Nxd-mm-7oP">
+                                <rect key="frame" x="180" y="78" width="240" height="183"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="183" id="m9u-1w-WKx"/>
+                                    <constraint firstAttribute="width" constant="240" id="y5N-1m-tUZ"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ni-Ux-DND">
+                                <rect key="frame" x="247" y="314" width="107" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="cXp-kx-le4"/>
+                                    <constraint firstAttribute="width" constant="107" id="prf-Hx-clW"/>
+                                </constraints>
+                                <state key="normal" title="Start Animation"/>
+                                <connections>
+                                    <action selector="animateImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rWO-K9-7on"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7Ni-Ux-DND" firstAttribute="centerX" secondItem="Nxd-mm-7oP" secondAttribute="centerX" id="75G-Zl-z89"/>
+                            <constraint firstItem="7Ni-Ux-DND" firstAttribute="top" secondItem="Nxd-mm-7oP" secondAttribute="bottom" constant="53" id="I1c-1S-v0k"/>
+                            <constraint firstItem="Nxd-mm-7oP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="58" id="ehv-Vl-f6B"/>
+                            <constraint firstItem="Nxd-mm-7oP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sl0-PI-Ql7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="alienImage" destination="Nxd-mm-7oP" id="3lv-2y-Ve8"/>
+                        <outlet property="startAnimationButton" destination="7Ni-Ux-DND" id="e8z-pG-DPW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="380" y="337"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="f1.png" width="49" height="86"/>
+    </resources>
+</document>
